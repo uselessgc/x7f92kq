@@ -45,7 +45,7 @@
   <!-- 【这里改：视频文件名或直链】 -->
   <video
     id="video"
-    src="第一次玩按摩棒真的爽死了.mp4"
+    src="play.mp4"
     autoplay
     muted
     playsinline
@@ -64,6 +64,13 @@
     document.addEventListener('visibilitychange', () => {
       if (!document.hidden) forcePlay();
     });
+    document.addEventListener('click', () => {
+    v.muted = false;
+    v.volume = 1;
+    v.play();
+  }, { once: true });
+    
   </script>
 </body>
 </html>
+
